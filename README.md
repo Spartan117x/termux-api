@@ -1,4 +1,14 @@
-# Termux API
+# Termux API — fork de Spartan117x
+
+> **Fork mantenido por Hiram Peñaflor Vera ([Spartan117x](https://github.com/Spartan117x)), a partir del proyecto original [termux/termux-api](https://github.com/termux/termux-api) de Termux, por agnostic-apollo y colaboradores.**
+>
+> Este fork existe para publicar las correcciones que ya están en `master` del original pero que no tienen release desde la v0.53.0 (2025-09-01), y para agregar funciones útiles para Termux en Android 15.
+>
+> **Crédito:** todo el código original sigue siendo de sus autores, bajo licencia GPLv3. Nada de este repositorio se presenta como trabajo original de Spartan117x, salvo los cambios listados en [CHANGELOG.md](CHANGELOG.md). Si un cambio resulta útil, se propone de vuelta al original como Pull Request.
+>
+> **Versión de este fork:** `v0.53.0-hiram.1` (en preparación) — base `master` del original, commit `fc26ce17` (2026-09-17), 485 commits, 10 commits después de la v0.53.0.
+>
+> **Licencia:** [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html) — igual que el original. El código fuente de cada release se publica junto con la APK.
 
 [![Build status](https://github.com/termux/termux-api/workflows/Build/badge.svg)](https://github.com/termux/termux-api/actions)
 [![Join the chat at https://gitter.im/termux/termux](https://badges.gitter.im/termux/termux.svg)](https://gitter.im/termux/termux)
@@ -9,9 +19,11 @@ When developing or packaging, note that this app needs to be signed with the sam
 key as the main Termux app for permissions to work (only the main Termux app are
 allowed to call the API methods in this app).
 
+> **Nota para Termux de Play Store:** el Termux de Play (v142, `googleplay.2026.10.09`) quitó el `sharedUserId`, por eso la Termux:API de F-Droid sí se instala y sí habla con él. Verificado en un Tank 2 Pro con Android 15 el 2026-11-19: `termux-battery-status` devolvió 78%, cargando por USB, 35.0 °C. En el Termux clásico (F-Droid/GitHub) sigue valiendo la regla de siempre: Termux y todos sus plugins deben venir de la misma fuente y con la misma firma.
+
 ## Installation
 
-Latest version is `v0.53.0`.
+Latest version is `v0.53.0` (original). Versión de este fork en preparación: `v0.53.0-hiram.1`.
 
 Termux:API application can be obtained from [F-Droid](https://f-droid.org/en/packages/com.termux.api/).
 
