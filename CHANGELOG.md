@@ -37,7 +37,12 @@ original ya tiene en `master` y no ha sacado en release desde la v0.53.0
 
 ### Agregado en este fork
 
-- (Pendiente de decidir con Hiram) — nada todavía. Candidatos, en orden:
+- 2026-11-19 — Workflows de GitHub Actions: fijar Java 17
+  (`actions/setup-java@v4`, temurin) en `github_action_build.yml` y
+  `github_release_build.yml`. Sin esto el runner de GitHub usa Java 25 y
+  Gradle 8.9 falla con `Unsupported class file major version 69`.
+  El workflow original no fijaba versión de Java.
+- (Pendiente de decidir con Hiram) — nada más todavía. Candidatos, en orden:
   1. `termux-battery-history`: guardar historial de batería/temperatura.
   2. `termux-salud`: un solo JSON con batería + temperatura + RAM +
      estado de los servidores locales (puertos 8080/8081/8082).
