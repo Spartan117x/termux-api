@@ -5,8 +5,8 @@ autor del cambio. Nada se borra del historial original.
 
 ## [v0.53.0-spartan117x.2] — 2026-11-26 (base: hiram/v0.53.0-hiram.1)
 
-Segunda versión del fork. Primeras dos funciones nuevas, hechas por Hiram
-y Muse. La app pasa a llamarse "Termux API Spartan117x" en el launcher
+Segunda versión del fork. Primeras dos funciones nuevas, de Spartan117x.
+La app pasa a llamarse "Termux API Spartan117x" en el launcher
 (el nombre interno del plugin sigue siendo "Termux:API").
 
 ### Agregado en este fork
