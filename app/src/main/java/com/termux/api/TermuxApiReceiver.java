@@ -9,6 +9,7 @@ import android.provider.Settings;
 import android.widget.Toast;
 
 import com.termux.api.apis.AudioAPI;
+import com.termux.api.apis.BatteryHistoryAPI;
 import com.termux.api.apis.BatteryStatusAPI;
 import com.termux.api.apis.BrightnessAPI;
 import com.termux.api.apis.CallLogAPI;
@@ -30,6 +31,7 @@ import com.termux.api.apis.NfcAPI;
 import com.termux.api.apis.NotificationAPI;
 import com.termux.api.apis.NotificationListAPI;
 import com.termux.api.apis.SAFAPI;
+import com.termux.api.apis.SaludAPI;
 import com.termux.api.apis.SensorAPI;
 import com.termux.api.apis.ShareAPI;
 import com.termux.api.apis.SmsInboxAPI;
@@ -98,6 +100,9 @@ public class TermuxApiReceiver extends BroadcastReceiver {
                 break;
             case "BatteryStatus":
                 BatteryStatusAPI.onReceive(this, context, intent);
+                break;
+            case "BatteryHistory":
+                BatteryHistoryAPI.onReceive(this, context, intent);
                 break;
             case "Brightness":
                 if (!Settings.System.canWrite(context)) {
@@ -201,6 +206,9 @@ public class TermuxApiReceiver extends BroadcastReceiver {
                 break;
             case "SAF":
                 SAFAPI.onReceive(this, context, intent);
+                break;
+            case "Salud":
+                SaludAPI.onReceive(this, context, intent);
                 break;
             case "Sensor":
                 SensorAPI.onReceive(context, intent);

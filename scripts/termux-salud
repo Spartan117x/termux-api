@@ -1,0 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/sh
+# termux-salud — fork Spartan117x/termux-api (v0.53.0-spartan117x.2)
+# Muestra en un solo JSON: batería, RAM y si están prendidos los
+# servidores locales de IAs (8080 heretic, 8081 dolphin, 8082 wizardlm).
+# Uso: termux-salud
+# Requiere la app "Termux API Spartan117x" instalada.
+termux-api Salud

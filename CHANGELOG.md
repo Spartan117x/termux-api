@@ -3,6 +3,26 @@
 Formato: lo del original se respeta tal cual; lo de este fork va con fecha y
 autor del cambio. Nada se borra del historial original.
 
+## [v0.53.0-spartan117x.2] — 2026-11-26 (base: hiram/v0.53.0-hiram.1)
+
+Segunda versión del fork. Primeras dos funciones nuevas, hechas por Hiram
+y Muse. La app pasa a llamarse "Termux API Spartan117x" en el launcher
+(el nombre interno del plugin sigue siendo "Termux:API").
+
+### Agregado en este fork
+
+- `termux-battery-history` (método `BatteryHistory`): cada llamada guarda
+  una muestra de la batería (nivel %, temperatura °C, estado, si está
+  enchufado, fecha/hora) en un archivo JSON privado de la app
+  (`battery-history.json`, máx. 288 muestras = 24 h a intervalos de 5 min,
+  se podan las viejas) y devuelve el historial completo como JSON. Sin
+  servicio en segundo plano: el historial crece con cada llamada; lo ideal
+  es llamarlo desde un cron de Termux cada 5 min.
+- `termux-salud` (método `Salud`): un solo JSON con batería (nivel,
+  temperatura, estado), RAM (total, disponible, usada) y si están prendidos
+  los servidores locales de IAs (puertos 8080 heretic, 8081 dolphin y 8082
+  wizardlm), por chequeo TCP a 127.0.0.1.
+
 ## [v0.53.0-hiram.1] — en preparación (base: master fc26ce17, 2026-09-17)
 
 Primera versión del fork. No cambia funciones a lo loco: publica lo que el
